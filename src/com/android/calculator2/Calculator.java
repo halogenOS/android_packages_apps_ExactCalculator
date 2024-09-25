@@ -58,7 +58,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.motion.widget.MotionLayout;
 import androidx.core.content.ContextCompat;
@@ -76,7 +75,7 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.text.DecimalFormatSymbols;
 
-public class Calculator extends AppCompatActivity
+public class Calculator extends BaseActivity
         implements OnTextSizeChangeListener, AlertDialogFragment.OnClickListener,
         Evaluator.EvaluationListener, /* for main result */
         OnLongClickListener {
@@ -319,6 +318,8 @@ public class Calculator extends AppCompatActivity
 
         // Hide all default options in the ActionBar.
         getSupportActionBar().setDisplayOptions(0);
+
+        setupInsets(findViewById(R.id.main_calculator));
 
         mMainCalculator = findViewById(R.id.main_calculator);
         mModeView = (TextView) findViewById(R.id.mode);

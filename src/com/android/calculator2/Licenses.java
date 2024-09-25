@@ -4,9 +4,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.webkit.WebView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-public class Licenses extends AppCompatActivity {
+public class Licenses extends BaseActivity {
 
     private static final String LICENSE_URL = "file:///android_asset/licenses.html";
 
@@ -14,10 +12,11 @@ public class Licenses extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        final WebView webView = new WebView(this);
-        webView.loadUrl(LICENSE_URL);
+        setContentView(R.layout.activity_licenses);
+        setupInsets(findViewById(R.id.main_layout));
 
-        setContentView(webView);
+        final WebView webView = findViewById(R.id.webview);
+        webView.loadUrl(LICENSE_URL);
     }
 
     @Override
