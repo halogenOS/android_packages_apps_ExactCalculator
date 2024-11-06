@@ -1,7 +1,11 @@
+/*
+ * SPDX-FileCopyrightText: 2015 The Android Open Source Project
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 package com.android.calculator2;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.webkit.WebView;
 
 public class Licenses extends BaseActivity {
@@ -11,8 +15,7 @@ public class Licenses extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_licenses);
+        setContentView(R.layout.activity_license);
         setupInsets(findViewById(R.id.main_layout));
 
         final WebView webView = findViewById(R.id.webview);
