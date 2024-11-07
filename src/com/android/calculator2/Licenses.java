@@ -6,6 +6,7 @@
 package com.android.calculator2;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.webkit.WebView;
 
 public class Licenses extends BaseActivity {
